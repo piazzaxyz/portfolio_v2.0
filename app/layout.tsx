@@ -12,9 +12,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pedro Henrique | Full Stack Developer",
+  title: "Eduardo Piazza | Full Stack Developer",
   description:
-    "Portfolio de Pedro Henrique - Desenvolvedor Full Stack especializado em React, Next.js, TypeScript e Node.js. Criando experiencias digitais modernas e performaticas.",
+    "Portfolio de Eduardo Piazza - Desenvolvedor Full Stack especializado em React, Next.js, TypeScript e Node.js. Criando experiencias digitais modernas e performaticas.",
   keywords: [
     "desenvolvedor",
     "full stack",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     "node.js",
     "portfolio",
   ],
-  authors: [{ name: "Pedro Henrique" }],
-  creator: "Pedro Henrique",
-  generator: "v0.app",
+  authors: [{ name: "Eduardo Piazza" }],
+  creator: "Eduardo Piazza",
+  generator: "Next.js",
   icons: {
     icon: [
       {
@@ -47,16 +47,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    title: "Pedro Henrique | Full Stack Developer",
+    title: "Eduardo Piazza | Full Stack Developer",
     description:
-      "Portfolio de Pedro Henrique - Desenvolvedor Full Stack especializado em React, Next.js, TypeScript e Node.js.",
-    siteName: "Pedro Henrique Portfolio",
+      "Portfolio de Eduardo Piazza - Desenvolvedor Full Stack especializado em React, Next.js, TypeScript e Node.js.",
+    siteName: "Eduardo Piazza Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pedro Henrique | Full Stack Developer",
+    title: "Eduardo Piazza | Full Stack Developer",
     description:
-      "Portfolio de Pedro Henrique - Desenvolvedor Full Stack especializado em React, Next.js, TypeScript e Node.js.",
+      "Portfolio de Eduardo Piazza - Desenvolvedor Full Stack especializado em React, Next.js, TypeScript e Node.js.",
   },
 };
 
@@ -77,9 +77,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
-      >
-        <ThemeProvider>{children}</ThemeProvider>
+      className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        <ThemeProvider children={undefined}>{children}</ThemeProvider>
         <Analytics />
       </body>
     </html>

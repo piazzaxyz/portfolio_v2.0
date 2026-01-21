@@ -11,6 +11,7 @@ interface ThemeContextType {
   language: Language
   toggleLanguage: () => void
   t: (key: string) => string
+  sectionBg: (sectionName: string) => string
 }
 
 const translations = {
@@ -24,7 +25,7 @@ const translations = {
     "nav.contact": "Contato",
     
     // Hero
-    "hero.subtitle": "Full Stack",
+    "hero.subtitle": " Alias",
     "hero.cta.projects": "Ver Projetos",
     "hero.cta.contact": "Entre em Contato",
     
@@ -154,6 +155,46 @@ const translations = {
   },
 }
 
+// Sistema de cores unificado para gradientes suaves entre seções
+const sectionBackgrounds = {
+  dark: {
+    hero: "bg-gradient-to-b from-gray-950 via-gray-900 to-gray-900",
+    about: "bg-gradient-to-b from-gray-900 via-gray-900 to-gray-900",
+    experience: "bg-gradient-to-b from-gray-900 via-gray-900 to-gray-900",
+    projects: "bg-gradient-to-b from-gray-900 via-gray-900 to-gray-900",
+    gallery: "bg-gradient-to-b from-gray-900 via-gray-900 to-gray-900",
+    terminal: "bg-gradient-to-b from-gray-900 via-gray-900 to-gray-900",
+    contact: "bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950",
+    footer: "bg-gray-950",
+    // Alternativa com gradientes sutis de cyan
+    heroAlt: "bg-gradient-to-b from-gray-950 via-gray-900/95 to-gray-900",
+    aboutAlt: "bg-gradient-to-b from-gray-900 via-gray-900/98 to-gray-900",
+    experienceAlt: "bg-gradient-to-b from-gray-900 via-cyan-950/5 to-gray-900",
+    projectsAlt: "bg-gradient-to-b from-gray-900 via-gray-900/98 to-gray-900",
+    galleryAlt: "bg-gradient-to-b from-gray-900 via-cyan-950/5 to-gray-900",
+    terminalAlt: "bg-gradient-to-b from-gray-900 via-gray-900/98 to-gray-900",
+    contactAlt: "bg-gradient-to-b from-gray-900 via-gray-900/95 to-gray-950",
+  },
+  light: {
+    hero: "bg-gradient-to-b from-gray-50 via-white to-white",
+    about: "bg-gradient-to-b from-white via-white to-white",
+    experience: "bg-gradient-to-b from-white via-white to-white",
+    projects: "bg-gradient-to-b from-white via-white to-white",
+    gallery: "bg-gradient-to-b from-white via-white to-white",
+    terminal: "bg-gradient-to-b from-white via-white to-white",
+    contact: "bg-gradient-to-b from-white via-white to-gray-50",
+    footer: "bg-gray-50",
+    // Alternativa com gradientes sutis de cyan
+    heroAlt: "bg-gradient-to-b from-gray-50 via-white/95 to-white",
+    aboutAlt: "bg-gradient-to-b from-white via-white/98 to-white",
+    experienceAlt: "bg-gradient-to-b from-white via-cyan-50/30 to-white",
+    projectsAlt: "bg-gradient-to-b from-white via-white/98 to-white",
+    galleryAlt: "bg-gradient-to-b from-white via-cyan-50/30 to-white",
+    terminalAlt: "bg-gradient-to-b from-white via-white/98 to-white",
+    contactAlt: "bg-gradient-to-b from-white via-white/95 to-gray-50",
+  },
+}
+
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
@@ -189,8 +230,14 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return translations[language][key as keyof (typeof translations)["pt-BR"]] || key
   }
 
+  // Função para obter o background de cada seção com transição suave
+  const sectionBg = (sectionName: string): string => {
+    const backgrounds = sectionBackgrounds[theme]
+    return backgrounds[sectionName as keyof typeof backgrounds] || backgrounds.hero
+  }
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, language, toggleLanguage, t }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, language, toggleLanguage, t, sectionBg }}>
       {children}
     </ThemeContext.Provider>
   )

@@ -63,7 +63,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-6xl sm:text-7xl md:text-9xl font-bold mb-6 text-balance"
         >
-          PZ
+          Piazza
         </motion.h1>
 
         <motion.div

@@ -63,17 +63,17 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">{t("footer.contact")}</h4>
             <a
-              href="mailto:eduardo@example.com"
+              href="mailto:piazza.vsc@gmail.com"
               className={`flex items-center gap-2 transition-colors hover:text-purple-500 ${
                 theme === "dark" ? "text-gray-400" : "text-gray-600"
               }`}
             >
               <Mail className="w-4 h-4" />
-              eduardo@example.com
+              piazza.vsc@gmail.com
             </a>
             <div className="flex gap-4 mt-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/eduardo-siqueira-de-melo-piazza-08b1b42b3/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`p-2 rounded-full transition-colors hover:bg-purple-500/10 hover:text-purple-500 ${
@@ -84,7 +84,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/piazzaxyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`p-2 rounded-full transition-colors hover:bg-purple-500/10 hover:text-purple-500 ${
@@ -95,7 +95,7 @@ export function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/piazzadev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`p-2 rounded-full transition-colors hover:bg-purple-500/10 hover:text-purple-500 ${
@@ -119,7 +119,7 @@ export function Footer() {
           © {new Date().getFullYear()} Eduardo Piazza. {t("footer.rights")}
           <br />
           <span className="text-xs mt-1 block">
-            Built with React + TypeScript + Tailwind CSS
+            PZ
           </span>
         </div>
       </div>
