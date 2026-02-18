@@ -16,6 +16,7 @@ const navItems = [
 
 export function Header() {
   const { theme, toggleTheme, language, toggleLanguage, t } = useTheme()
+  const cvPath = encodeURI("/Eduardo Piazza - Currículo 2026.pdf")
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -63,8 +64,15 @@ export function Header() {
               ))}
             </nav>
 
-            {/* Theme & Language Toggle */}
+            {/* CV Download, Theme & Language Toggle */}
             <div className="hidden lg:flex items-center gap-4">
+              <a
+                href={cvPath}
+                download
+                className="px-4 py-2 rounded-full bg-purple-600 text-white text-sm font-medium hover:bg-purple-700 transition-colors"
+              >
+                {language === "pt-BR" ? "Currículo" : "Resume"}
+              </a>
               <button
                 onClick={toggleLanguage}
                 className="px-3 py-1.5 text-sm font-medium rounded-full border border-purple-500/30 hover:bg-purple-500/10 transition-colors"
@@ -193,6 +201,15 @@ export function Header() {
                     className="p-3 rounded-full bg-purple-500/10 hover:bg-purple-500/20 transition-colors"
                   >
                     <Instagram className="w-5 h-5" />
+                  </a>
+                </div>
+                <div className="mt-6 flex justify-center">
+                  <a
+                    href={cvPath}
+                    download
+                    className="px-6 py-3 rounded-full bg-purple-600 text-white font-medium hover:bg-purple-700 transition-colors"
+                  >
+                    {language === "pt-BR" ? "Baixar Currículo" : "Download Resume"}
                   </a>
                 </div>
               </div>
