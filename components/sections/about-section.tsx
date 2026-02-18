@@ -2,6 +2,7 @@
 
 import { useTheme } from "@/contexts/theme-context"
 import { motion } from "motion/react"
+import Image from "next/image"
 import { Code2, Database, Globe, Server, Zap, Bot, Cloud, GitBranch } from "lucide-react"
 
 const skills = [
@@ -46,19 +47,24 @@ export function AboutSection() {
             className="relative group"
           >
             <div
-              className={`relative rounded-3xl overflow-hidden shadow-2xl ${
-                theme === "dark" ? "bg-cyan-900/20" : "bg-cyan-100"
+              className={`relative rounded-3xl overflow-hidden ring-0 ${
+                theme === "dark" ? "bg-transparent" : "bg-transparent"
               }`}
             >
-              <div className="aspect-square flex items-center justify-center">
-                <div className="text-9xl font-bold text-cyan-500/30">PZ</div>
+              <div className="aspect-square relative">
+                <Image
+                  src="/images/Eduardo Piazza - Foto Perfil.svg"
+                  alt={language === "pt-BR" ? "Foto de Eduardo Piazza" : "Eduardo Piazza profile"}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 300px, 400px"
+                  draggable={false}
+                />
               </div>
               {/* Glow effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-cyan-600/20 to-transparent" />
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-500/20 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl" />
+            {/* Decorative elements removed to avoid visual artefacts */}
           </motion.div>
 
           {/* Bio & Skills */}

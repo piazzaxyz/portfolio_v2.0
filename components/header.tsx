@@ -35,8 +35,8 @@ export function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
             ? theme === "dark"
-              ? "bg-black/80 backdrop-blur-xl shadow-lg border-b border-white/10"
-              : "bg-white/80 backdrop-blur-xl shadow-lg border-b border-black/10"
+              ? "bg-black/80 backdrop-blur-xl shadow-lg"
+              : "bg-white/80 backdrop-blur-xl shadow-lg"
             : "bg-transparent"
         }`}
       >
