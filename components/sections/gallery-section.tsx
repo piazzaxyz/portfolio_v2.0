@@ -14,7 +14,7 @@ const galleryItems = [
   },
   {
     id: 2,
-    textPT: "Coding no Escritorio",
+    textPT: "Codando no Escritório",
     textEN: "Office Coding",
     image: "/images/gallery-2.jpeg",
   },
@@ -38,8 +38,8 @@ const galleryItems = [
   },
   {
     id: 6,
-    textPT: "Multi-monitor Setup",
-    textEN: "Multi-monitor Setup",
+    textPT: "Estudos, código e entretenimento",
+    textEN: "Studies, code and entertainment",
     image: "/images/gallery-6.jpeg",
   },
   {

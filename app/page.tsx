@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/sections/hero-section";
 import { AboutSection } from "@/components/sections/about-section";
@@ -12,6 +13,10 @@ import { Footer } from "@/components/footer";
 import { ParticlesBackground } from "@/components/particles-background";
 
 export default function Portfolio() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-background text-foreground">
       <ParticlesBackground />

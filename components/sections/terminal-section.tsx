@@ -71,9 +71,10 @@ export function TerminalSection() {
         setHistory((prev) => [
           ...prev,
           { type: "output", content: "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" },
-          { type: "output", content: "2023 - Present | Full Stack Developer @ Agromai" },
-          { type: "output", content: "2022 - 2023    | Freelance Developer" },
-          { type: "output", content: "2021 - 2022    | Development Internship @ TechStart" },
+          { type: "output", content: "2025 - Present | Full Stack Developer @ Agromai" },
+          { type: "output", content: "2024 - Present    | Freelance Developer" },
+          { type: "output", content: "2024 - 2025    | Trainee Pão dos Pobres" },
+          { type: "output", content: "2023 - 2024    | Trainee Sesc/Senac" },
           { type: "output", content: "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" },
         ])
         break
@@ -97,7 +98,7 @@ export function TerminalSection() {
           ...prev,
           { type: "ascii", content: asciiArt },
           { type: "output", content: "" },
-          { type: "output", content: `✨ ${t("terminal.easteregg")}` },
+          { type: "output", content: `${t("terminal.easteregg")}` },
         ])
         break
       case "":

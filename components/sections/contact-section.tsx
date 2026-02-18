@@ -53,7 +53,7 @@ export function ContactSection() {
       key: "message",
       title: t("contact.message"),
       type: "textarea",
-      placeholder: "Your message...",
+      placeholder: "Sua mensagem aqui...",
     },
   ]
 
@@ -78,8 +78,21 @@ export function ContactSection() {
   }
 
   const handleSubmit = () => {
-    console.log("Form submitted:", formData)
-    setIsSubmitted(true)
+    const subject = `Contact from ${formData.name} - ${formData.reason}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nReason: ${formData.reason}\n\nMessage:\n${formData.message}`;
+    const mailtoUrl = `mailto:piazza.vsc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoUrl);
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setCurrentStep(0);
+      setFormData({
+        name: "",
+        email: "",
+        reason: "",
+        message: "",
+      });
+    }, 5000);
   }
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -94,8 +107,6 @@ export function ContactSection() {
       id="contact"
       className={`py-20 px-4 ${
         theme === "dark"
-          ? "bg-gradient-to-b from-purple-900/10 to-transparent"
-          : "bg-gradient-to-b from-purple-50 to-transparent"
       }`}
     >
       <div className="max-w-2xl mx-auto">
@@ -345,7 +356,7 @@ export function ContactSection() {
           className="mt-12 flex justify-center gap-6"
         >
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/eduardo-siqueira-de-melo-piazza"
             target="_blank"
             rel="noopener noreferrer"
             className={`p-4 rounded-full transition-all hover:scale-110 ${
@@ -357,7 +368,7 @@ export function ContactSection() {
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/piazzaxyz"
             target="_blank"
             rel="noopener noreferrer"
             className={`p-4 rounded-full transition-all hover:scale-110 ${
@@ -369,7 +380,7 @@ export function ContactSection() {
             <Github className="w-6 h-6" />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/piazzadev/"
             target="_blank"
             rel="noopener noreferrer"
             className={`p-4 rounded-full transition-all hover:scale-110 ${

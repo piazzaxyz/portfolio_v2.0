@@ -20,7 +20,7 @@ export function AboutSection() {
   const { t, theme, language } = useTheme()
 
   const bioText = language === "pt-BR" 
-    ? "Desenvolvedor com foco principal em Front-End, atuando com TypeScript, React, Next.js, Vite, Tailwind CSS e arquitetura de interfaces modernas, com experiencia em componentizacao, performance, acessibilidade e organizacao de projetos baseados em features. Possuo vivencia na refatoracao e modernizacao de codigo legado, aplicacao de boas praticas de UI/UX e construcao de aplicacoes escalaveis e manuteniveis. Tambem tenho conhecimento em backend com Python (Django e FastAPI), desenvolvimento de APIs, integracao entre servicos, treinamento de LLMs, estrutura de intents, criacao de discord bots e chatbots para whatsapp, uso de Docker, Git e Banco de Dados."
+    ? "Desenvolvedor com foco principal em Front-End, atuando com TypeScript, React, Next.js, Vite, Tailwind CSS e arquitetura de interfaces modernas, com experiência em componentização, performance, acessibilidade e organização de projetos baseados em features. Possuo vivência na refatoração e modernização de código legado, aplicação de boas práticas de UI/UX e construção de aplicações escaláveis e manuteníveis. Também tenho conhecimento em backend com Python (Django e FastAPI), desenvolvimento de APIs, integração entre serviços, treinamento de LLMs, estrutura de intents, criação de discord bots e chatbots para whatsapp, uso de Docker, Git e Banco de Dados."
     : "Developer focused on Front-End, working with TypeScript, React, Next.js, Vite, Tailwind CSS and modern interface architecture, with experience in componentization, performance, accessibility and feature-based project organization. I have experience in refactoring and modernizing legacy code, applying UI/UX best practices and building scalable and maintainable applications. I also have backend knowledge with Python (Django and FastAPI), API development, service integration, LLM training, intent structure, discord bots and whatsapp chatbots creation, Docker, Git and Databases."
 
   return (
@@ -114,16 +114,16 @@ export function AboutSection() {
               }`}
             >
               <h3 className="font-semibold mb-2 text-cyan-500">
-                {language === "pt-BR" ? "Formacao" : "Education"}
+                {language === "pt-BR" ? "Formação Acadêmica" : "Academic Education"}
               </h3>
               <p className={theme === "dark" ? "text-gray-300" : "text-gray-600"}>
                 {language === "pt-BR" 
-                  ? "Engenharia da Computacao - UERGS (Em andamento)" 
+                  ? "Engenharia da Computação - UERGS (Em andamento)" 
                   : "Computer Engineering - UERGS (In progress)"}
               </p>
               <p className={`text-sm mt-2 ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
                 {language === "pt-BR" 
-                  ? "Geracao Caldeira (Java) 2025 - Fase Final | 20+ Certificacoes Alura, IBM e Udemy" 
+                  ? "Geração Caldeira (Java) 2025 - Fase Final | 20+ Certificações Alura, IBM e Udemy" 
                   : "Caldeira Generation (Java) 2025 - Final Phase | 20+ Alura, IBM and Udemy Certifications"}
               </p>
             </motion.div>

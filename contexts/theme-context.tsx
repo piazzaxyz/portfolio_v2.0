@@ -25,13 +25,13 @@ const translations = {
     "nav.contact": "Contato",
     
     // Hero
-    "hero.subtitle": " Alias",
+    "hero.subtitle": "Desenvolvedor",
     "hero.cta.projects": "Ver Projetos",
     "hero.cta.contact": "Entre em Contato",
     
     // About
     "about.title": "Sobre Mim",
-    "about.bio": "Desenvolvedor Full Stack apaixonado por criar soluções digitais inovadoras. Com experiência em desenvolvimento web moderno, busco sempre entregar código limpo, performático e escalável. Atualmente focado em React, TypeScript e Node.js.",
+    "about.bio": "Desenvolvedor Full Stack apaixonado por criar soluções digitais inovadoras. Com experiência em desenvolvimento web moderno, busco sempre entregar código limpo, de alto desempenho e escalável. Atualmente focado em React, TypeScript e Node.js.",
     "about.studying": "Cursando:",
     "about.course": "Ciência da Computação",
     
@@ -77,7 +77,7 @@ const translations = {
     
     // Terminal commands
     "terminal.help": "Comandos disponíveis: help, about, contact, experience, education, skills, clear, easteregg",
-    "terminal.about.response": "PZ - Desenvolvedor Front-End focado em TypeScript, React, Next.js e Tailwind CSS, com experiência em LLMs e chatbots.",
+    "terminal.about.response": "PZ - Desenvolvedor Full Stack focado em TypeScript, React, Next.js e Tailwind CSS, com experiência também em LLMs, chatbots e desenvolvimento BackEnd Builder, utilizando Python (Django e FastAPI).",
     "terminal.contact.response": "Email: piazza.vsc@gmail.com | Tel: (51) 9 9369-3721 | Porto Alegre/RS",
     "terminal.education.response": "Engenharia da Computação - UERGS (Em andamento) | Geração Caldeira (Java) 2025 | 20+ Certificações",
     "terminal.skills.response": "TypeScript, React, Next.js, Tailwind CSS, Python, Django, FastAPI, Docker, GCP, Git, LLMs",

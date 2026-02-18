@@ -74,7 +74,7 @@ export function HeroSection() {
         >
           <span className="text-foreground/80">{t("hero.subtitle")}</span>
           <RotatingText
-            texts={["Developer", "Coder", "Frontend", "Backend"]}
+            texts={["FrontEnd", "BackEnd", "FullStack"]}
             mainClassName="px-4 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg"
             staggerFrom="last"
             staggerDuration={0.025}

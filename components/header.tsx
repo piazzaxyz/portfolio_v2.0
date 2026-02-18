@@ -171,7 +171,7 @@ export function Header() {
 
                 <div className="flex justify-center gap-6">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/eduardo-siqueira-de-melo-piazza"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-purple-500/10 hover:bg-purple-500/20 transition-colors"
@@ -179,7 +179,7 @@ export function Header() {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/piazzaxyz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-purple-500/10 hover:bg-purple-500/20 transition-colors"
@@ -187,7 +187,7 @@ export function Header() {
                     <Github className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/piazzadev/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-purple-500/10 hover:bg-purple-500/20 transition-colors"
